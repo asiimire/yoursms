@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box; /* Makes padding and border part of element's total width and height */
+}
+
+
+body {
+  max-width: 100vw;
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #D3D3FF;
+}
+
+img, video {
+  max-width: 100%; /* Prevent images or videos from overflowing */
+  height: auto; /* Maintain aspect ratio */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #D3D3FF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.logo img {
+  width: 200px;
+  height: 150px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff6600;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+.cta {
+  color: #fff;
+  background-color: #ff6600;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #e65a00;
+}
+
+.login {
+  color: #333;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 2px solid #ff6600;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.login:hover {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #e6e9fc;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #ff6600;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.hero button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero button:hover {
+  background-color: #e65a00;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+}
+
+.feature h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.feature p {
+  color: #666;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  /* Navigation */
+  /* Initially hide the navbar */
+  nav {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fix to top-right */
+    top: 0;
+    right: 0;
+    background-color: #ffffff1b; /* Optional background color */
+    width: 250px; /* Set width for the nav */
+    height: 100vh; /* Full height */
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Ensure it's on top */
+  }
+
+ /* Hamburger Menu (appears on small screens) */
+ .hamburger {
+  display: block; /* Show hamburger icon */
+  position: absolute; /* Position the hamburger on the top-right */
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  z-index: 10000; /* Ensure hamburger stays on top */
+}
+
+  nav.active {
+    display: flex; /* Show the navbar when active */
+  }
+
+  /* Navbar Links */
+  nav a {
+    text-align: left; /* Align the links to the left */
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  nav a:hover {
+    background-color: #f4f4f42c;
+  }
+
+  .service-cards {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    justify-content: flex-start; /* Align items to the left */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    width: 100%; /* Ensure the container takes full width */
+    white-space: nowrap; /* Prevent wrapping of items */
+    /* Hide the scrollbar */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none;  /* For Firefox */
+  }
+  
+  .service-card {
+    flex-shrink: 0; /* Prevent the items from shrinking */
+    width: 100%; /* Set a fixed width for each card */
+    margin-right: 20px; /* Optional: Add some spacing between cards */
+  }
+  
+  .icon-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+}
+
+/* our services */
+.our-service {
+  background-image: url('images/services.png'); /* Change this to your actual image path */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Section Title and Subtitle */
+.section-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff; /* Bright yellow-green */
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 48px;
+    font-weight: bold;
+    color: #d4ff00;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    color: #f5f5f5;
+}
+
+
+.service-cards {
+  display: flex;
+  gap: 20px;
+  padding: 20px 40px;
+  justify-content: flex-start; /* Align items to the left */
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  width: 100%; /* Ensure the container takes full width */
+  white-space: nowrap; /* Prevent wrapping of items */
+  flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+
+  /* Hide the scrollbar */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+  scrollbar-width: none;  /* For Firefox */
+}
+
+.service-card {
+  flex: 1 0 250px; /* Allow the cards to grow and shrink with a base size of 250px */
+  max-width: 250px; /* Prevent cards from growing too large */
+  min-width: 200px; /* Allow the cards to shrink if necessary */
+  margin-right: 20px; /* Optional: Add some spacing between cards */
+}
+
+
+.icon-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

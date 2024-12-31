@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourSMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Your SMS">
+
+        </div>
+        <div class="hamburger" id="hamburger-menu">
+            &#9776; <!-- This is the hamburger icon -->
+        </div>
+        <nav id="navbar">
+            <a href="home.html">Home</a>
+            <a href="#">Service</a>
+            <a href="#">Resources</a>
+            <a href="#">Pricing</a>
+            <a href="login.html" class="login">Login</a>
+            <a href="register.html" class="cta">Register Now</a>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <h1>Instant <span>Reliable</span> Personal</h1>
+        <p>Your Top Choice For Business Messaging Solutions</p>
+        <button>Start Sending</button>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Engagement</h3>
+            <p>Automate your SMS efforts with ease.</p>
+        </div>
+        <div class="feature">
+            <h3>Analytics</h3>
+            <p>Measure your reach among recipients.</p>
+        </div>
+        <div class="feature">
+            <h3>Users</h3>
+            <p>68K+ happy users utilizing the app.</p>
+        </div>
+    </section>
+
+
+
+    <section class="our-service">
+        <h2 class="section-title">our service</h2>
+        <h3 class="section-subtitle">we provide the best service</h3>
+        <p class="section-description">
+            From streamlining customer communication to automating your messaging efforts, <span
+                style="color: #ff6600;">Your SMS</span> makes business interactions effortless. Our platform empowers
+            you to manage all your SMS needs in one place, ensuring seamless connections and measurable results for
+            businesses of any size.
+        </p>
+        <div class="service-cards">
+            <div class="service-card">
+                <div class="icon-container">
+                    <img src="images/sms_api_icon.png" alt="SMS API" />
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="icon-container">
+                    <img src="images/send_sms_icon.png" alt="Send SMS" />
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="icon-container">
+                    <img src="images/whatsapp_sms_icon.png" alt="WhatsApp SMS" />
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="icon-container">
+                    <img src="images/promotional_sms_icon.png" alt="Promotional SMS" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div>
+            <img src="images/how.png" alt="HOW IT WORKS">
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <img src="images/ladies.png" alt="WHO ARE WE">
+        </div>
+    </section>
+
+
+    <footer>
+        &copy; 2024 YourSMS. All rights reserved.
+    </footer>
+
+    <!-- JS -->
+    <script>
+        // Get the hamburger icon and navbar elements
+        const hamburger = document.getElementById('hamburger-menu');
+        const navbar = document.getElementById('navbar');
+
+        // Add an event listener to toggle the 'active' class on the navbar
+        hamburger.addEventListener('click', function () {
+            navbar.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>
